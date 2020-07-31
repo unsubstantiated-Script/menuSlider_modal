@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Russo+One&display=swap');
+
+:root {
+    --modal-duration: 1s;
+    --primary-color: #402C1A;
+    --secondary-color: #8C754A;
+    --tertiary-color: #F28705;
+    --quadrary-color: #D92B3A;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: .1rem;
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+}
+
+nav {
+    background-color: var(--secondary-color);
+    border-right: 5px solid rgba(242, 22, 22, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    z-index: 100;
+    transform: translateX(-100%);
+}
+
+nav .logo {
+    padding: 30px 0;
+    text-align: center;
+}
+
+nav .logo img {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li {
+    border-bottom: 2px solid rgba(242, 22, 22, .5);
+    padding: 20px;
+}
+
+nav ul li:hover {
+    background-color: var(--primary-color);
+    color: var(--quadrary-color)
+}
+
+nav ul li:first-of-type {
+    border-top: 2px solid rgba(242, 22, 22, .5);
+}
+
+nav ul li a {
+    color: var(--tertiary-color);
+    text-decoration: none;
+}
+
+header {
+    background-color: var(--quadrary-color);
+    font-size: 130%;
+    position: relative;
+    padding: 40px 15px;
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Russo One', sans-serif;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--tertiary-color)
+}
+
+header p {
+    margin: 30px 0;
+}
+
+h2,
+h3 {
+    color: var(--quadrary-color);
+}
+
+button,
+input[type='submit'] {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    color: var(--tertiary-color);
+    cursor: pointer;
+    padding: 8px 12px;
+    border: 2px solid var(--primary-color);
+    font-size: 18px;
+}
+
+input[type='submit'] {
+    border: 2px solid var(--quadrary-color)
+}
+
+
+
+button:hover,
+input[type='submit']:hover {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--tertiary-color)
+}
+
+button:focus {
+    outline: none;
+}
+
+.toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.cta-btn {
+    padding: 12px 30px;
+    font-size: 20px;
+}
+
+.container {
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 800px;
+
+}
+
+.modal-container {
+    background-color: rgba(64, 44, 26, .8);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal {
+    background-color: var(--quadrary-color);
+    border-radius: 5px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    width: 400px;
+    padding: 20px 0px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    border: 3px solid var(--primary-color);
+}
+
+.close-btn:hover {
+    background-color: var(--quadrary-color);
+    color: var(--tertiary-color);
+    border: 3px solid var(--quadrary-color);
+}
+
+.modal-header {
+    font-size: 24px;
+    background-color: var(--tertiary-color);
+    padding: 15px;
+    margin: 0px;
+}
+
+.modal-header h3 {
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.modal-form div {
+    margin: 15px 0;
+}
+
+.modal-form label {
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-form .form-input {
+    padding: 8px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    display: flex;
+    margin: 30px auto 0 auto;
+    width: 80%
+}
