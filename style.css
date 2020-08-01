@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Russo+One&display=swap");
 
 :root {
-  --modal-duration: 1s;
+  --modal-duration: 2s;
   --primary-color: #402c1a;
   --secondary-color: #8c754a;
   --tertiary-color: #f28705;
@@ -199,6 +199,8 @@ button:focus {
   max-width: 100%;
   width: 400px;
   padding: 20px 0px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
 }
 
 .close-btn {
@@ -252,4 +254,14 @@ button:focus {
   display: flex;
   margin: 30px auto 0 auto;
   width: 80%;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
